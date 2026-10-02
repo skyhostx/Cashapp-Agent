@@ -1,0 +1,8 @@
+{
+  "name": "CashappAgent - 100% identity-verified Cash App accounts with Bitcoin withdrawal capabilities",
+  "description": "Buy Verified Cash App Accounts (BTC Enabled \u0026 Non-BTC) with instant delivery and secure crypto checkout at CashappAgent.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
