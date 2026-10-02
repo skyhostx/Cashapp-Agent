@@ -32,14 +32,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
       - name: Build project
         run: npm run build
 
-      - name: Ensure .nojekyll exists
-        run: touch ./dist/.nojekyll
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Ensure .nojekyll and CNAME exist in dist
+        run: |
+          touch ./dist/.nojekyll
+          if [ -f "./CNAME" ]; then cp ./CNAME ./dist/CNAME; fi
+          if [ -f "./public/CNAME" ]; then cp ./public/CNAME ./dist/CNAME; fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
