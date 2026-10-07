@@ -161,7 +161,7 @@ export function getPageFromLocation(): PageView {
     }
 
     // Check pathname routes
-    if (rawPath === '/blog' || rawPath.endsWith('/blog')) return 'blog';
+    if (rawPath === '/blog' || rawPath.endsWith('/blog') || rawPath.startsWith('/blog/')) return 'blog';
     if (rawPath.includes('buy-verified-cashapp-accounts') || rawPath.includes('all-accounts')) return 'all-accounts';
     if (rawPath.includes('buy-btc-enabled-cashapp-accounts') || rawPath.includes('btc-accounts')) return 'btc-accounts';
     if (rawPath.includes('buy-non-btc-cashapp-accounts') || rawPath.includes('non-btc-accounts')) return 'non-btc-accounts';

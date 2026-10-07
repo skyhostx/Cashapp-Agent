@@ -4,9 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Instant Single Page App URL Canonicalization & Deep Link Restorer -->
+    <!-- Instant Single Page App URL Canonicalization, HTTPS Enforcement & Deep Link Restorer -->
     <script>
       (function(l) {
+        // Enforce HTTPS on custom production domain
+        if (l.protocol === 'http:' && (l.hostname === 'cashappagent.com' || l.hostname === 'www.cashappagent.com')) {
+          window.location.replace('https://cashappagent.com' + l.pathname + l.search + l.hash);
+          return;
+        }
+        // Enforce canonical non-www domain
+        if (l.hostname === 'www.cashappagent.com') {
+          window.location.replace('https://cashappagent.com' + l.pathname + l.search + l.hash);
+          return;
+        }
+        // Instant Single Page App URL Canonicalization & Deep Link Restorer
         if (l.search && (l.search.startsWith('?/') || l.search.startsWith('?p=/') || l.search[1] === '/')) {
           var raw = l.search.replace(/^\?(p=)?\/?/, '/');
           var parts = raw.split('&');

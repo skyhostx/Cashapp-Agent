@@ -26,9 +26,17 @@ export const BlogPage: React.FC<BlogPageProps> = ({
   onExploreAccounts
 }) => {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(() => {
-    if (typeof window !== 'undefined' && window.location.hash) {
-      const hashSlug = window.location.hash.replace(/^#/, '');
-      return BLOG_POSTS.find((p) => p.slug === hashSlug) || null;
+    if (typeof window !== 'undefined') {
+      const pathname = window.location.pathname;
+      if (pathname.startsWith('/blog/')) {
+        const slug = pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
+        const found = BLOG_POSTS.find((p) => p.slug === slug);
+        if (found) return found;
+      }
+      if (window.location.hash) {
+        const hashSlug = window.location.hash.replace(/^#/, '');
+        return BLOG_POSTS.find((p) => p.slug === hashSlug) || null;
+      }
     }
     return null;
   });
@@ -36,27 +44,45 @@ export const BlogPage: React.FC<BlogPageProps> = ({
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
 
-  // Sync hash on mount or when hash changes
+  // Sync pathname or hash on popstate and hashchange
   useEffect(() => {
-    const handleHashSync = () => {
+    const handleLocationSync = () => {
+      const pathname = window.location.pathname;
+      if (pathname.startsWith('/blog/')) {
+        const slug = pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
+        const found = BLOG_POSTS.find((p) => p.slug === slug);
+        if (found) {
+          setSelectedPost(found);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+      }
       const hashSlug = window.location.hash.replace(/^#/, '');
       if (hashSlug) {
         const found = BLOG_POSTS.find((p) => p.slug === hashSlug);
         if (found) {
           setSelectedPost(found);
           window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
         }
+      }
+      if (pathname === '/blog' || pathname === '/blog/') {
+        setSelectedPost(null);
       }
     };
 
-    window.addEventListener('hashchange', handleHashSync);
-    return () => window.removeEventListener('hashchange', handleHashSync);
+    window.addEventListener('popstate', handleLocationSync);
+    window.addEventListener('hashchange', handleLocationSync);
+    return () => {
+      window.removeEventListener('popstate', handleLocationSync);
+      window.removeEventListener('hashchange', handleLocationSync);
+    };
   }, []);
 
   const handleSelectPost = (post: BlogPost) => {
     setSelectedPost(post);
     if (typeof window !== 'undefined') {
-      window.history.replaceState(null, '', `/blog#${post.slug}`);
+      window.history.pushState(null, '', `/blog/${post.slug}`);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -64,7 +90,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
   const handleBackToList = () => {
     setSelectedPost(null);
     if (typeof window !== 'undefined') {
-      window.history.replaceState(null, '', '/blog');
+      window.history.pushState(null, '', '/blog');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -82,7 +108,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
 
   const handleShare = (post: BlogPost, e: React.MouseEvent) => {
     e.stopPropagation();
-    const url = `${SITE_ORIGIN}/blog#${post.slug}`;
+    const url = `${SITE_ORIGIN}/blog/${post.slug}`;
     if (navigator.clipboard) {
       navigator.clipboard.writeText(url);
       setCopiedSlug(post.slug);
@@ -114,7 +140,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
         <div className="flex items-center gap-2 text-xs font-mono text-slate-500">
           <span className="hidden sm:inline">URL:</span>
           <span className="text-[#00D632] bg-[#00D632]/10 px-2 py-0.5 rounded-lg border border-[#00D632]/20">
-            {SITE_ORIGIN}/blog{selectedPost ? `#${selectedPost.slug}` : ''}
+            {SITE_ORIGIN}/blog{selectedPost ? `/${selectedPost.slug}` : ''}
           </span>
         </div>
       </div>
@@ -294,7 +320,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
               <a
                 key={post.id}
                 id={post.slug}
-                href={`/blog#${post.slug}`}
+                href={`/blog/${post.slug}`}
                 onClick={(e) => {
                   if (isModifiedClick(e)) return;
                   e.preventDefault();

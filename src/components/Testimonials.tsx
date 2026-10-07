@@ -46,6 +46,9 @@ export const Testimonials: React.FC = () => {
                   <img
                     src={t.avatar}
                     alt={`Verified customer ${t.name} from ${t.location}`}
+                    width={40}
+                    height={40}
+                    loading="lazy"
                     className="w-10 h-10 rounded-full object-cover border border-emerald-500/40"
                     referrerPolicy="no-referrer"
                   />

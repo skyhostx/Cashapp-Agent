@@ -264,7 +264,87 @@ export function getSeoMetadata(page: PageView): SeoMetaTags {
         ],
       };
 
-    case 'blog':
+    case 'blog': {
+      // Check if viewing a specific blog post
+      let activePost: typeof BLOG_POSTS[0] | undefined;
+      if (typeof window !== 'undefined') {
+        const pathname = window.location.pathname;
+        if (pathname.startsWith('/blog/')) {
+          const slug = pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
+          activePost = BLOG_POSTS.find((p) => p.slug === slug);
+        }
+        if (!activePost && window.location.hash) {
+          const hashSlug = window.location.hash.replace(/^#/, '');
+          activePost = BLOG_POSTS.find((p) => p.slug === hashSlug);
+        }
+      }
+
+      if (activePost) {
+        const postCanonical = `${SITE_ORIGIN}/blog/${activePost.slug}`;
+        return {
+          title: `${activePost.title} - CashappAgent`,
+          description: activePost.excerpt,
+          keywords: `${activePost.tags.join(', ')}, cash app guide, cash app security, cashappagent`,
+          canonical: postCanonical,
+          ogTitle: `${activePost.title} - CashappAgent Guide`,
+          ogDescription: activePost.excerpt,
+          ogUrl: postCanonical,
+          ogType: 'article',
+          twitterTitle: `${activePost.title} - CashappAgent`,
+          twitterDescription: activePost.excerpt,
+          jsonLd: [
+            baseOrganization,
+            baseWebSite,
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: `${SITE_ORIGIN}/`,
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Blog',
+                  item: `${SITE_ORIGIN}/blog`,
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: activePost.title,
+                  item: postCanonical,
+                },
+              ],
+            },
+            {
+              '@type': 'BlogPosting',
+              mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': postCanonical,
+              },
+              headline: activePost.title,
+              description: activePost.excerpt,
+              datePublished: '2026-08-01T00:00:00Z',
+              dateModified: '2026-10-07T00:00:00Z',
+              author: {
+                '@type': 'Organization',
+                name: activePost.author,
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: 'CashappAgent',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: `${SITE_ORIGIN}/favicon.svg`,
+                },
+              },
+            },
+          ],
+        };
+      }
+
       return {
         title: 'Cash App Insights, Bitcoin Limits & Security Blog | CashappAgent',
         description: 'Read the latest research, tutorials, and security guides on Cash App limits, Bitcoin mempool withdrawal fees, Sutton Bank routing, and account warm-up strategies.',
@@ -293,11 +373,12 @@ export function getSeoMetadata(page: PageView): SeoMetaTags {
                 '@type': 'Organization',
                 name: post.author,
               },
-              url: `${SITE_ORIGIN}/blog#${post.slug}`,
+              url: `${SITE_ORIGIN}/blog/${post.slug}`,
             })),
           },
         ],
       };
+    }
 
     case 'faq':
       return {

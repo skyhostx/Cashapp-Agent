@@ -4,8 +4,8 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Blog Post 1: Warm Up Guide -->
   <url>
-    <loc>https://cashappagent.com/blog#how-to-safely-warm-up-verified-cash-app-account</loc>
-    <lastmod>2026-08-29T01:40:00+00:00</lastmod>
+    <loc>https://cashappagent.com/blog/how-to-safely-warm-up-verified-cash-app-account</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
@@ -17,8 +17,8 @@
 
   <!-- Blog Post 2: BTC Limits Guide -->
   <url>
-    <loc>https://cashappagent.com/blog#bitcoin-withdrawal-limits-cash-app-guide</loc>
-    <lastmod>2026-08-29T01:40:00+00:00</lastmod>
+    <loc>https://cashappagent.com/blog/bitcoin-withdrawal-limits-cash-app-guide</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
@@ -30,8 +30,8 @@
 
   <!-- Blog Post 3: Sutton Bank Routing Guide -->
   <url>
-    <loc>https://cashappagent.com/blog#sutton-bank-routing-direct-deposit-cash-app</loc>
-    <lastmod>2026-08-29T01:40:00+00:00</lastmod>
+    <loc>https://cashappagent.com/blog/sutton-bank-routing-direct-deposit-cash-app</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
@@ -43,8 +43,8 @@
 
   <!-- Blog Post 4: Limit Tiers Comparison Guide -->
   <url>
-    <loc>https://cashappagent.com/blog#understanding-4k-10k-25k-limit-tiers</loc>
-    <lastmod>2026-08-29T01:40:00+00:00</lastmod>
+    <loc>https://cashappagent.com/blog/understanding-4k-10k-25k-limit-tiers</loc>
+    <lastmod>2026-10-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>

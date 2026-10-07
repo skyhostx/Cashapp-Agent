@@ -265,6 +265,151 @@ const routes = [
     `
   },
   {
+    slug: 'blog/how-to-safely-warm-up-verified-cash-app-account',
+    title: 'How to Safely Warm Up a New Verified Cash App Account (Anti-Ban Blueprint) - CashappAgent',
+    description: 'Step-by-step guidance on establishing device trust, configuring US residential proxies, and scaling transaction limits without triggering automated flags.',
+    keywords: 'cash app warm up guide, anti-ban cash app blueprint, residential proxy setup cash app, cash app account safety',
+    ogTitle: 'How to Safely Warm Up a New Verified Cash App Account (Anti-Ban Blueprint)',
+    ogDescription: 'Step-by-step guide on device trust, US residential proxies, and transaction velocity scaling.',
+    h1: 'How to Safely Warm Up a <span style="color: #00D632;">Verified Cash App Account</span>',
+    subheading: 'The definitive anti-ban security blueprint for newly acquired Cash App accounts. Device binding, residential proxies, and transaction ramping.',
+    mainHtml: `
+      <article style="margin-bottom: 3rem; color: #cbd5e1; line-height: 1.8;">
+        <h2 style="font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">The Importance of Device &amp; IP Warm-up</h2>
+        <p style="margin-bottom: 1.5rem;">When accessing a newly acquired verified Cash App account, automated risk algorithms monitor the initial login metadata. Jumping directly to multi-thousand-dollar peer-to-peer transfers or immediate Bitcoin withdrawals will trigger risk audits.</p>
+        
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: #00D632; margin-top: 1.5rem; margin-bottom: 0.5rem;">Step 1: Clean Device Fingerprint</h3>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+          <li>Ensure you are using a dedicated mobile device or a clean, unrooted Android profile.</li>
+          <li>Clear cache and app storage before logging in.</li>
+          <li>Match the device timezone and geolocation to the state of the account owner.</li>
+        </ul>
+
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: #00D632; margin-top: 1.5rem; margin-bottom: 0.5rem;">Step 2: Dedicated US Residential Static Proxy</h3>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+          <li>Never use free public VPNs or shared datacenter IP pools (such as DigitalOcean or AWS IPs).</li>
+          <li>Use high-reputation static US residential socks5 proxies from major US cities.</li>
+          <li>Maintain persistent IP stickiness for at least 14 days.</li>
+        </ul>
+
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: #00D632; margin-top: 1.5rem; margin-bottom: 0.5rem;">Step 3: Progressive Transaction Laddering</h3>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+          <li><strong>Days 1–2:</strong> Log in, check balance, keep session active for 5–10 minutes.</li>
+          <li><strong>Days 3–4:</strong> Conduct a micro-transaction ($10–$25) to another legitimate US account.</li>
+          <li><strong>Days 5–7:</strong> Receive small direct deposits or ACH credits ($50–$200).</li>
+          <li><strong>Week 2+:</strong> Gradually scale to full weekly limit tiers ($4,000–$25,000).</li>
+        </ul>
+        <div style="margin-top: 2rem;">
+          <a href="/buy-verified-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none;">Browse Available Accounts</a>
+        </div>
+      </article>
+    `
+  },
+  {
+    slug: 'blog/bitcoin-withdrawal-limits-cash-app-guide',
+    title: 'Cash App Bitcoin Withdrawal Limits: Everything You Need to Know in 2026 - CashappAgent',
+    description: 'Understand on-chain limits ($2,000/24h, $5,000/week), zero-fee standard settlement, priority mempool broadcast, and wallet verification requirements.',
+    keywords: 'cash app bitcoin withdrawal limits, cash app btc send limit, bitcoin cash app on-chain withdrawal, btc enabled cash app',
+    ogTitle: 'Cash App Bitcoin Withdrawal Limits: 2026 Guide',
+    ogDescription: 'Full breakdown of daily, weekly, and enhanced on-chain Bitcoin external withdrawal limits.',
+    h1: 'Cash App Bitcoin <span style="color: #F7931A;">Withdrawal Limits Guide</span>',
+    subheading: 'Everything you need to know about external blockchain transfers, Layer 1 & Lightning settlements, and identity verification tiers.',
+    mainHtml: `
+      <article style="margin-bottom: 3rem; color: #cbd5e1; line-height: 1.8;">
+        <h2 style="font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Cash App Bitcoin Features Overview</h2>
+        <p style="margin-bottom: 1.5rem;">Cash App has become one of the most streamlined gateways for buying, depositing, and externally sending Bitcoin directly on-chain across Layer 1 and Lightning Network.</p>
+        
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: #F7931A; margin-top: 1.5rem; margin-bottom: 0.5rem;">Official Limit Breakdowns</h3>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+          <li><strong>Standard Account:</strong> $2,000 per rolling 24-hour window.</li>
+          <li><strong>Enhanced Verified Tier:</strong> Up to $5,000 to $25,000 per rolling 7-day window.</li>
+          <li><strong>Deposit Limit:</strong> Unlimited on-chain BTC incoming deposits.</li>
+        </ul>
+
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: #F7931A; margin-top: 1.5rem; margin-bottom: 0.5rem;">How to Guarantee On-Chain Clearance</h3>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+          <li><strong>SSN &amp; ID Clearance:</strong> An account must have approved government ID records to unlock external sends.</li>
+          <li><strong>Priority Network Fees:</strong> Cash App allows choosing between Standard (free), Rush, and Priority mempool speeds.</li>
+          <li><strong>Hardware Wallet Compatibility:</strong> Send directly to Ledger, Trezor, BitBox02, and cold storage addresses without custodial restrictions.</li>
+        </ul>
+        <div style="margin-top: 2rem;">
+          <a href="/buy-btc-enabled-cashapp-accounts" style="background: #F7931A; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none;">View BTC Enabled Accounts</a>
+        </div>
+      </article>
+    `
+  },
+  {
+    slug: 'blog/sutton-bank-routing-direct-deposit-cash-app',
+    title: 'How Sutton Bank US Routing Works for Cash App Direct Deposits - CashappAgent',
+    description: 'A comprehensive technical overview of routing numbers, automated clearing house (ACH) settlements, and employer direct payroll deposits.',
+    keywords: 'sutton bank cash app routing number, cash app direct deposit routing, lincoln savings bank cash app, ach payroll cash app',
+    ogTitle: 'How Sutton Bank US Routing Works for Cash App Direct Deposits',
+    ogDescription: 'Technical overview of ACH settlements, routing numbers, and employer payroll direct deposits.',
+    h1: 'How Sutton Bank Routing Works for <span style="color: #00D632;">Cash App Direct Deposits</span>',
+    subheading: 'Technical breakdown of US Federal Reserve routing numbers, checking account strings, and early direct deposit ACH rails.',
+    mainHtml: `
+      <article style="margin-bottom: 3rem; color: #cbd5e1; line-height: 1.8;">
+        <h2 style="font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Sutton Bank Partner Infrastructure</h2>
+        <p style="margin-bottom: 1.5rem;">Cash App operates banking services through Sutton Bank and Lincoln Savings Bank (Members FDIC). Every verified account receives:</p>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+          <li><strong>Routing Transit Number (RTN):</strong> 9-digit US Federal Reserve code.</li>
+          <li><strong>Direct Deposit Account Number:</strong> Unique dedicated checking account string.</li>
+        </ul>
+
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: #00D632; margin-top: 1.5rem; margin-bottom: 0.5rem;">Uses for Dedicated Banking Numbers</h3>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+          <li><strong>Employer Direct Deposit:</strong> Receive wages up to 2 days earlier than traditional brick-and-mortar institutions.</li>
+          <li><strong>Tax Refunds:</strong> Route IRS federal and state income tax returns directly into your balance.</li>
+          <li><strong>Wire &amp; ACH Inbound:</strong> Accept third-party US business payments and platform payouts.</li>
+        </ul>
+        <div style="margin-top: 2rem;">
+          <a href="/buy-non-btc-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none;">View USD Accounts with Routing</a>
+        </div>
+      </article>
+    `
+  },
+  {
+    slug: 'blog/understanding-4k-10k-25k-limit-tiers',
+    title: 'Comparing 4k, 10k, and 25k Limit Accounts: Which Tier Fits Your Business? - CashappAgent',
+    description: 'Break down daily velocity, monthly volume ceilings, and price-to-volume ROI across beginner, scaling, and high-frequency merchant accounts.',
+    keywords: 'cash app account tiers, 4k cash app limit, 10k cash app limit, 25k cash app limit, cash app transfer limits compared',
+    ogTitle: 'Comparing 4k, 10k, and 25k Limit Cash App Accounts',
+    ogDescription: 'Choosing the right limit tier for personal transactions, e-commerce dropshipping, or liquidity operations.',
+    h1: 'Comparing <span style="color: #00D632;">4k, 10k, and 25k Limit</span> Cash App Accounts',
+    subheading: 'In-depth analysis of weekly velocity, monthly caps, KYC requirements, and ROI for each account tier.',
+    mainHtml: `
+      <article style="margin-bottom: 3rem; color: #cbd5e1; line-height: 1.8;">
+        <h2 style="font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">Choosing the Right Limit Tier</h2>
+        <p style="margin-bottom: 1.5rem;">Selecting the proper account tier is critical to sustaining operational flow without hitting sudden monthly transfer caps.</p>
+        
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: #00D632; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. The $4,000 Limit Account</h3>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+          <li><strong>Best for:</strong> Personal use, occasional freelance receipts, small crypto buying.</li>
+          <li><strong>Weekly Sending:</strong> $1,000.</li>
+          <li><strong>Monthly Velocity:</strong> $4,000.</li>
+        </ul>
+
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: #00D632; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. The $10,000 Limit Account</h3>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+          <li><strong>Best for:</strong> Small businesses, e-commerce dropshippers, and regular crypto traders.</li>
+          <li><strong>Weekly Sending:</strong> $2,500 – $3,000.</li>
+          <li><strong>Monthly Velocity:</strong> $10,000+.</li>
+        </ul>
+
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: #00D632; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. The $25,000 Limit Account (Enterprise)</h3>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+          <li><strong>Best for:</strong> High-volume agencies, P2P desks, crypto liquidity providers.</li>
+          <li><strong>Weekly Sending:</strong> Up to $7,500.</li>
+          <li><strong>Monthly Velocity:</strong> $25,000+.</li>
+          <li><strong>Includes:</strong> Full BTC withdrawal verification, aged history, Sutton Bank routing, and complete identity records.</li>
+        </ul>
+        <div style="margin-top: 2rem;">
+          <a href="/buy-verified-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none;">View Complete Catalog</a>
+        </div>
+      </article>
+    `
+  },
+  {
     slug: '404',
     title: '404 - Page Not Found | CashappAgent',
     description: 'The requested page could not be found. Explore our verified Cash App accounts catalog with BTC limits up to $25k at CashappAgent.',
@@ -314,6 +459,26 @@ for (const route of routes) {
     .replace(/<meta\s+name="twitter:description"\s+content="[^"]*"/i, `<meta name="twitter:description" content="${route.ogDescription || route.description}"`)
     .replace(/<meta\s+name="twitter:url"\s+content="[^"]*"/i, `<meta name="twitter:url" content="${pageUrl}"`);
 
+  // Update Breadcrumbs in JSON-LD structured data
+  const pageBreadcrumbJson = JSON.stringify({
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://cashappagent.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": route.title.split('|')[0].trim(),
+        "item": pageUrl
+      }
+    ]
+  });
+  customizedHtml = customizedHtml.replace(/\{"@type":"BreadcrumbList"[\s\S]*?"item":"https:\/\/cashappagent\.com\/"\}\s*\]\s*\}/i, pageBreadcrumbJson);
+
   // Replace <main> content inside pre-rendered fallback
   if (route.h1 && route.mainHtml) {
     const pageMainContent = `
@@ -336,8 +501,9 @@ for (const route of routes) {
   const destFile = path.join(targetDir, 'index.html');
   fs.writeFileSync(destFile, customizedHtml, 'utf8');
 
-  // Also write [slug].html directly to dist root for non-trailing slash 200 OK resolution
+  // Also write [slug].html directly for non-trailing slash 200 OK resolution
   const destHtmlFile = path.join(distDir, `${route.slug}.html`);
+  fs.mkdirSync(path.dirname(destHtmlFile), { recursive: true });
   fs.writeFileSync(destHtmlFile, customizedHtml, 'utf8');
 
   console.log(`Generated SEO static page: ${route.slug}/index.html & ${route.slug}.html`);

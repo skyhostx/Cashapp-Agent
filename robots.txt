@@ -1,5 +1,5 @@
 # robots.txt for https://cashappagent.com
-# Clean Google-friendly robots configuration
+# Technically optimized for Googlebot, Bingbot, and major search engine crawlers
 
 User-agent: *
 Allow: /
@@ -9,14 +9,24 @@ Disallow: /dashboard/
 Disallow: /checkout/
 Disallow: /cart/
 Disallow: /login/
-Disallow: /*?*checkout=true
-Disallow: /*?*cart=true
 Disallow: /*?*token=*
 Disallow: /*?*session=*
-Disallow: /*?*fbclid=*
-Disallow: /*?*gclid=*
 
-# XML Sitemaps
+# Explicitly ensure Googlebot has unrestricted crawl access to CSS, JS, and all indexable assets
+User-agent: Googlebot
+Allow: /
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.webp$
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Canonical XML Sitemap
 Sitemap: https://cashappagent.com/sitemap.xml
-Sitemap: https://cashappagent.com/sitemap_index.xml
-
