@@ -12,9 +12,12 @@ import {
   Share2, 
   Sparkles, 
   CheckCircle2,
-  ShieldCheck
+  ShieldCheck,
+  ExternalLink,
+  ChevronRight
 } from 'lucide-react';
-import { SITE_ORIGIN, isModifiedClick } from '../../utils/navigation';
+import { SITE_ORIGIN, isModifiedClick, getBlogPostUrl, getFullBlogPostUrl } from '../../utils/navigation';
+import { applySeoMetadata } from '../../utils/seo';
 
 interface BlogPageProps {
   onNavigateHome: () => void;
@@ -85,6 +88,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({
       window.history.pushState(null, '', `/blog/${post.slug}`);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    // Immediately update canonical tags, title, and Schema.org metadata
+    setTimeout(() => {
+      applySeoMetadata('blog');
+    }, 10);
   };
 
   const handleBackToList = () => {
@@ -93,6 +100,9 @@ export const BlogPage: React.FC<BlogPageProps> = ({
       window.history.pushState(null, '', '/blog');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    setTimeout(() => {
+      applySeoMetadata('blog');
+    }, 10);
   };
 
   const categories = ['All', 'Guides', 'Bitcoin', 'Limits', 'Security'];
@@ -245,6 +255,77 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                 >
                   #{t}
                 </span>
+              ))}
+            </div>
+
+            {/* Direct Permalinks & Canonical URL Display */}
+            <div className="pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-400 bg-black/40 p-4 rounded-2xl border border-slate-800">
+              <div className="space-y-1">
+                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">Canonical Article URL</span>
+                <a
+                  href={`/blog/${selectedPost.slug}`}
+                  data-full-url={`${SITE_ORIGIN}/blog/${selectedPost.slug}`}
+                  className="text-emerald-400 font-mono hover:underline break-all"
+                >
+                  {SITE_ORIGIN}/blog/{selectedPost.slug}
+                </a>
+              </div>
+              <button
+                onClick={(e) => handleShare(selectedPost, e)}
+                className="self-start sm:self-center px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+              >
+                {copiedSlug === selectedPost.slug ? (
+                  <>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00D632]" />
+                    <span>Copied!</span>
+                  </>
+                ) : (
+                  <>
+                    <Share2 className="w-3.5 h-3.5 text-slate-400" />
+                    <span>Copy Link</span>
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Related Articles & Guides */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-black text-white font-['Outfit',sans-serif] flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-[#00D632]" />
+              <span>Related Verification Guides &amp; Research</span>
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {BLOG_POSTS.filter((p) => p.slug !== selectedPost.slug).slice(0, 3).map((rel) => (
+                <a
+                  key={rel.id}
+                  href={`/blog/${rel.slug}`}
+                  data-full-url={`${SITE_ORIGIN}/blog/${rel.slug}`}
+                  onClick={(e) => {
+                    if (isModifiedClick(e)) return;
+                    e.preventDefault();
+                    handleSelectPost(rel);
+                  }}
+                  className="p-5 rounded-2xl bg-slate-900/80 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/40 transition-all flex flex-col justify-between space-y-3 group cursor-pointer"
+                >
+                  <div className="space-y-2">
+                    <span className="text-[10px] font-black uppercase text-[#00D632] bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30">
+                      {rel.category}
+                    </span>
+                    <h4 className="text-sm font-bold text-white group-hover:text-[#00D632] transition-colors line-clamp-2 leading-snug">
+                      {rel.title}
+                    </h4>
+                    <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">
+                      {rel.excerpt}
+                    </p>
+                  </div>
+                  <div className="pt-2 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+                    <span>{rel.readTime}</span>
+                    <span className="text-[#00D632] group-hover:translate-x-1 transition-transform font-bold flex items-center gap-1">
+                      Read Guide &rarr;
+                    </span>
+                  </div>
+                </a>
               ))}
             </div>
           </div>

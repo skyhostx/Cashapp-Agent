@@ -421,7 +421,7 @@ export const VirtualAccountPreview: React.FC = () => {
             {/* Quick Action CTA to Scroll to Accounts */}
             <div className="pt-2">
               <a
-                href="#accounts"
+                href="/buy-verified-cashapp-accounts"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition-all border border-slate-700 hover:border-slate-500"
               >
                 <span>Select &amp; Buy Verified Account Now</span>

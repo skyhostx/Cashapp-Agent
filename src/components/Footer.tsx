@@ -2,6 +2,7 @@ import React from 'react';
 import { CashAppLogo } from './CashAppLogo';
 import { CRYPTO_GATEWAYS } from '../data/cryptoGateways';
 import { ACCOUNT_PRODUCTS } from '../data/products';
+import { BLOG_POSTS } from '../data/blogPosts';
 import { AccountProduct, PageView } from '../types';
 import { PAGE_ROUTES, isModifiedClick, getProductUrl } from '../utils/navigation';
 import { 
@@ -13,7 +14,8 @@ import {
   ArrowRight,
   Shield,
   Sparkles,
-  Search
+  Search,
+  BookOpen
 } from 'lucide-react';
 
 interface FooterProps {
@@ -125,7 +127,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectProduct, onOpenOrderLook
 
       {/* Main Footer Links */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           
           {/* Brand Info (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
@@ -203,6 +205,47 @@ export const Footer: React.FC<FooterProps> = ({ onSelectProduct, onOpenOrderLook
                     <span className="group-hover:translate-x-0.5 transition-transform">{p.name}</span>
                     <span className="text-[#00D632] font-mono font-bold bg-[#00D632]/10 px-1.5 py-0.5 rounded text-[11px]">
                       ${p.price}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Official Guides & Research (1 col) */}
+          <div className="space-y-3">
+            <h4 className="text-sm font-black text-white font-['Outfit',sans-serif] pb-1 border-b border-slate-800">
+              <a
+                href="/blog"
+                data-full-url="https://cashappagent.com/blog"
+                onClick={(e) => handleLinkClick('blog', e)}
+                className="flex items-center gap-1.5 hover:text-[#00D632] transition-colors group cursor-pointer"
+              >
+                <BookOpen className="w-4 h-4 text-[#00D632] group-hover:rotate-12 transition-transform" />
+                <span>Knowledge &amp; Guides</span>
+              </a>
+            </h4>
+            <ul className="space-y-2">
+              {BLOG_POSTS.map((post) => (
+                <li key={post.id}>
+                  <a
+                    href={`/blog/${post.slug}`}
+                    data-full-url={`https://cashappagent.com/blog/${post.slug}`}
+                    onClick={(e) => {
+                      if (isModifiedClick(e)) return;
+                      e.preventDefault();
+                      if (typeof window !== 'undefined') {
+                        window.history.pushState(null, '', `/blog/${post.slug}`);
+                      }
+                      if (onNavigate) onNavigate('blog');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="hover:text-[#00D632] transition-colors flex items-start gap-1.5 text-left w-full cursor-pointer group text-[11px] leading-tight py-0.5"
+                    title={post.title}
+                  >
+                    <ArrowRight className="w-3 h-3 text-[#00D632] group-hover:translate-x-0.5 transition-transform mt-0.5 shrink-0" />
+                    <span className="line-clamp-2 text-slate-400 group-hover:text-white transition-colors">
+                      {post.title.replace(' (Anti-Ban Blueprint)', '').replace(': Everything You Need to Know in 2026', '')}
                     </span>
                   </a>
                 </li>

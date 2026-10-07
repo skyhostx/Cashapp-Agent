@@ -106,14 +106,14 @@ export function getSeoMetadata(page: PageView): SeoMetaTags {
                 description: prod.description,
                 disambiguatingDescription: prod.shortDesc,
                 keywords: `${prod.focusKeyword}, ${prod.tags.join(', ')}`,
-                url: `${SITE_ORIGIN}/${prod.btcEnabled ? 'buy-btc-enabled-cashapp-accounts' : 'buy-non-btc-cashapp-accounts'}#${prod.id}`,
+                url: `${SITE_ORIGIN}/product/${prod.id}`,
                 brand: { '@type': 'Brand', name: 'CashappAgent' },
                 offers: {
                   '@type': 'Offer',
                   price: prod.price.toString(),
                   priceCurrency: 'USD',
                   availability: 'https://schema.org/InStock',
-                  url: `${SITE_ORIGIN}/${prod.btcEnabled ? 'buy-btc-enabled-cashapp-accounts' : 'buy-non-btc-cashapp-accounts'}#${prod.id}`,
+                  url: `${SITE_ORIGIN}/product/${prod.id}`,
                 },
               },
             })),
@@ -479,6 +479,78 @@ export function getSeoMetadata(page: PageView): SeoMetaTags {
           breadcrumbsList,
         ],
       };
+
+    case 'product': {
+      let activeProduct = ACCOUNT_PRODUCTS[0];
+      if (typeof window !== 'undefined') {
+        const pathname = window.location.pathname.toLowerCase();
+        for (const p of ACCOUNT_PRODUCTS) {
+          if (pathname.includes(`/product/${p.id}`) || pathname.endsWith(`/${p.id}`)) {
+            activeProduct = p;
+            break;
+          }
+        }
+      }
+
+      const prodCanonical = `${SITE_ORIGIN}/product/${activeProduct.id}`;
+      return {
+        title: `${activeProduct.name} (${activeProduct.limitDisplay}) - Buy Verified Account | CashappAgent`,
+        description: `${activeProduct.shortDesc} Instant crypto delivery, full SSN & government ID verification documents, Sutton Bank routing, 30-day warranty.`,
+        keywords: `${activeProduct.focusKeyword}, ${activeProduct.tags.join(', ')}, buy verified cash app, cashappagent`,
+        canonical: prodCanonical,
+        ogTitle: `${activeProduct.name} - Instant Crypto Delivery`,
+        ogDescription: activeProduct.shortDesc,
+        ogUrl: prodCanonical,
+        ogType: 'product',
+        twitterTitle: `${activeProduct.name} - CashappAgent`,
+        twitterDescription: activeProduct.shortDesc,
+        jsonLd: [
+          baseOrganization,
+          baseWebSite,
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: `${SITE_ORIGIN}/`,
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'All Accounts',
+                item: `${SITE_ORIGIN}/buy-verified-cashapp-accounts`,
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: activeProduct.name,
+                item: prodCanonical,
+              },
+            ],
+          },
+          {
+            '@type': 'Product',
+            name: activeProduct.name,
+            description: activeProduct.description,
+            disambiguatingDescription: activeProduct.shortDesc,
+            sku: activeProduct.id,
+            brand: {
+              '@type': 'Brand',
+              name: 'CashappAgent',
+            },
+            offers: {
+              '@type': 'Offer',
+              price: activeProduct.price.toString(),
+              priceCurrency: 'USD',
+              availability: 'https://schema.org/InStock',
+              url: prodCanonical,
+            },
+          },
+        ],
+      };
+    }
 
     case 'not-found':
       return {

@@ -32,6 +32,7 @@ import { SafetyGuidePage } from './components/pages/SafetyGuidePage';
 import { BulkOrdersPage } from './components/pages/BulkOrdersPage';
 import { ContactPage } from './components/pages/ContactPage';
 import { SitemapPage } from './components/pages/SitemapPage';
+import { ProductPage } from './components/pages/ProductPage';
 import { NotFoundPage } from './components/pages/NotFoundPage';
 
 import { getPageFromLocation, setBrowserPage, PAGE_ROUTES } from './utils/navigation';
@@ -325,7 +326,17 @@ export default function App() {
           />
         )}
 
-        {/* VIEW 10: 404 Not Found Page */}
+        {/* VIEW 10: Dedicated Standalone Product Page (/product/:id) */}
+        {currentPage === 'product' && (
+          <ProductPage
+            onBuyNow={handleBuyNow}
+            onAddToCart={handleAddToCart}
+            onNavigateHome={() => navigateTo('home')}
+            onExploreAccounts={() => navigateTo('all-accounts')}
+          />
+        )}
+
+        {/* VIEW 11: 404 Not Found Page */}
         {currentPage === 'not-found' && (
           <NotFoundPage
             onNavigateHome={() => navigateTo('home')}

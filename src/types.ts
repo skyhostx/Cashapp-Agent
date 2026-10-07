@@ -11,6 +11,7 @@ export type PageView =
   | 'safety-guide' 
   | 'bulk-orders'
   | 'sitemap'
+  | 'product'
   | 'not-found';
 
 export interface AccountProduct {

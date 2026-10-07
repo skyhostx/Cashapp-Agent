@@ -81,6 +81,13 @@ export const PAGE_ROUTES: Record<PageView, PageRouteInfo> = {
     title: 'Website Sitemap & Page Index | CashappAgent',
     label: 'Sitemap'
   },
+  product: {
+    page: 'product',
+    path: '/product/btc-4k',
+    fullUrl: `${SITE_ORIGIN}/product/btc-4k`,
+    title: 'Verified Cash App Account Details | CashappAgent',
+    label: 'Product'
+  },
   'not-found': {
     page: 'not-found',
     path: '/404',
@@ -153,11 +160,9 @@ export function getPageFromLocation(): PageView {
       return 'not-found';
     }
 
-    // Direct product URL handling (e.g. /product/btc-4k or /buy-btc-enabled-cashapp-accounts#btc-4k)
+    // Direct product URL handling (e.g. /product/btc-4k)
     if (rawPath.startsWith('/product/') || rawPath.startsWith('/products/')) {
-      if (rawPath.includes('btc-') && !rawPath.includes('non-btc-')) return 'btc-accounts';
-      if (rawPath.includes('non-btc-')) return 'non-btc-accounts';
-      return 'all-accounts';
+      return 'product';
     }
 
     // Check pathname routes
@@ -245,16 +250,27 @@ export function isModifiedClick(event?: React.MouseEvent | MouseEvent): boolean 
 }
 
 /**
- * Returns the canonical URL for any product matching Google XML sitemap
+ * Returns the canonical clean URL for any product matching Google XML sitemap
+ * Format: https://cashappagent.com/product/:id (e.g. /product/btc-4k)
  */
 export function getProductUrl(product: string | { id: string; btcEnabled?: boolean; category?: string }): string {
   const id = typeof product === 'string' ? product : product.id;
-  const isBtc = typeof product === 'string'
-    ? id.startsWith('btc-')
-    : ('btcEnabled' in product ? Boolean(product.btcEnabled) : product.category === 'btc-enabled');
+  return `/product/${id}`;
+}
 
-  return isBtc
-    ? `/buy-btc-enabled-cashapp-accounts#${id}`
-    : `/buy-non-btc-cashapp-accounts#${id}`;
+/**
+ * Returns the canonical clean relative URL for any blog post
+ * Format: /blog/:slug (e.g. /blog/how-to-safely-warm-up-verified-cash-app-account)
+ */
+export function getBlogPostUrl(slug: string): string {
+  return `/blog/${slug}`;
+}
+
+/**
+ * Returns the full canonical absolute URL for any blog post
+ * Format: https://cashappagent.com/blog/:slug
+ */
+export function getFullBlogPostUrl(slug: string): string {
+  return `${SITE_ORIGIN}/blog/${slug}`;
 }
 

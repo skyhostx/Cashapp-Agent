@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <!-- Core Homepage -->
+  <!-- Core Storefront Homepage -->
   <url>
     <loc>https://cashappagent.com/</loc>
     <lastmod>2026-10-07</lastmod>
@@ -14,7 +14,7 @@
     </image:image>
   </url>
 
-  <!-- Shop & Category Hubs -->
+  <!-- Category & Catalog Hubs -->
   <url>
     <loc>https://cashappagent.com/buy-verified-cashapp-accounts</loc>
     <lastmod>2026-10-07</lastmod>
@@ -46,6 +46,74 @@
       <image:loc>https://cashappagent.com/favicon.svg</image:loc>
       <image:title>Buy Non-BTC Verified Cash App Accounts</image:title>
       <image:caption>Budget-friendly verified Cash App accounts for standard USD peer-to-peer sending and debit card cashouts.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Individual Products (Clean Canonical URLs) -->
+  <url>
+    <loc>https://cashappagent.com/product/btc-4k</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://cashappagent.com/favicon.svg</image:loc>
+      <image:title>BTC Enable 4k Cash App Account</image:title>
+      <image:caption>$4,000 weekly transaction limit with on-chain Bitcoin external wallet withdrawals unlocked.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cashappagent.com/product/btc-10k</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://cashappagent.com/favicon.svg</image:loc>
+      <image:title>BTC Enable 10k Cash App Account</image:title>
+      <image:caption>Aged high-tier verified Cash App account with enhanced Bitcoin transaction limits and $10,000 weekly turnover capacity.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cashappagent.com/product/btc-25k</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://cashappagent.com/favicon.svg</image:loc>
+      <image:title>BTC Enable 25k Cash App Account</image:title>
+      <image:caption>Premium institutional/business tier verified Cash App account with maximum $25,000 weekly limits.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cashappagent.com/product/non-btc-4k</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://cashappagent.com/favicon.svg</image:loc>
+      <image:title>Non BTC Enable 4k Cash App Account</image:title>
+      <image:caption>Fully verified personal Cash App account with $4,000 weekly sending limit for standard USD peer-to-peer transfers.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cashappagent.com/product/non-btc-10k</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://cashappagent.com/favicon.svg</image:loc>
+      <image:title>Non BTC Enable 10k Cash App Account</image:title>
+      <image:caption>Aged USD verified Cash App account with expanded $10,000 weekly volume limit for high-frequency transfers.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://cashappagent.com/product/non-btc-15k</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://cashappagent.com/favicon.svg</image:loc>
+      <image:title>Non BTC Enable 15k Cash App Account</image:title>
+      <image:caption>The pinnacle of our fiat lineup: $15,000 weekly capacity for high-turnover business invoicing.</image:caption>
     </image:image>
   </url>
 

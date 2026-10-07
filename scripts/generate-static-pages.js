@@ -36,21 +36,21 @@ const routes = [
             <h3 style="font-size: 1.3rem; color: #fff; margin: 0.8rem 0 0.4rem 0;">4K Non-BTC Verified Account</h3>
             <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1rem;">$4,000 weekly transaction limit. Ideal for personal transfers and online shopping.</p>
             <div style="font-size: 1.5rem; font-weight: 900; color: #00D632; margin-bottom: 1rem;">$120.00</div>
-            <a href="/buy-non-btc-cashapp-accounts#non-btc-4k" style="display: inline-block; background: #00D632; color: #000; padding: 0.6rem 1.2rem; border-radius: 10px; font-weight: bold; text-decoration: none;">View Specifications</a>
+            <a href="/product/non-btc-4k" style="display: inline-block; background: #00D632; color: #000; padding: 0.6rem 1.2rem; border-radius: 10px; font-weight: bold; text-decoration: none;">View Specifications</a>
           </div>
           <div style="background: #111822; border: 1px solid #F7931A; padding: 1.5rem; border-radius: 16px;">
             <span style="background: #F7931A; color: #000; font-size: 0.75rem; font-weight: 900; padding: 0.2rem 0.6rem; border-radius: 9999px;">HOT &bull; BITCOIN UNLOCKED</span>
             <h3 style="font-size: 1.3rem; color: #fff; margin: 0.8rem 0 0.4rem 0;">4K BTC-Enabled Verified Account</h3>
             <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1rem;">$4,000 limit with on-chain Bitcoin deposit & withdrawal unlocked immediately.</p>
             <div style="font-size: 1.5rem; font-weight: 900; color: #F7931A; margin-bottom: 1rem;">$180.00</div>
-            <a href="/buy-btc-enabled-cashapp-accounts#btc-4k" style="display: inline-block; background: #F7931A; color: #000; padding: 0.6rem 1.2rem; border-radius: 10px; font-weight: bold; text-decoration: none;">View Specifications</a>
+            <a href="/product/btc-4k" style="display: inline-block; background: #F7931A; color: #000; padding: 0.6rem 1.2rem; border-radius: 10px; font-weight: bold; text-decoration: none;">View Specifications</a>
           </div>
           <div style="background: #111822; border: 1px solid #1e293b; padding: 1.5rem; border-radius: 16px;">
             <span style="background: #3b82f6; color: #fff; font-size: 0.75rem; font-weight: 900; padding: 0.2rem 0.6rem; border-radius: 9999px;">HIGH LIMIT</span>
             <h3 style="font-size: 1.3rem; color: #fff; margin: 0.8rem 0 0.4rem 0;">10K BTC-Enabled Verified Account</h3>
             <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1rem;">$10,000 limit for high-volume crypto traders and e-commerce merchants.</p>
             <div style="font-size: 1.5rem; font-weight: 900; color: #00D632; margin-bottom: 1rem;">$320.00</div>
-            <a href="/buy-btc-enabled-cashapp-accounts#btc-10k" style="display: inline-block; background: #00D632; color: #000; padding: 0.6rem 1.2rem; border-radius: 10px; font-weight: bold; text-decoration: none;">View Specifications</a>
+            <a href="/product/btc-10k" style="display: inline-block; background: #00D632; color: #000; padding: 0.6rem 1.2rem; border-radius: 10px; font-weight: bold; text-decoration: none;">View Specifications</a>
           </div>
         </div>
       </section>
@@ -161,15 +161,31 @@ const routes = [
     subheading: 'Technical tutorials, compliance insights, and step-by-step security walkthroughs from verified fintech professionals.',
     mainHtml: `
       <section style="margin-bottom: 3rem;">
-        <h2 style="font-size: 1.8rem; font-weight: 800; color: #ffffff; margin-bottom: 1.5rem;">Featured Articles</h2>
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: #ffffff; margin-bottom: 1.5rem;">Official Technical Guides &amp; Research</h2>
         <div style="display: flex; flex-direction: column; gap: 1.5rem;">
           <article style="background: #111822; padding: 1.5rem; border-radius: 16px; border: 1px solid #1e293b;">
-            <h3 style="font-size: 1.3rem; color: #fff; margin-bottom: 0.5rem;"><a href="/blog" style="color: #00D632; text-decoration: none;">How to Unlock Cash App Bitcoin (BTC) External Withdrawal in 2026</a></h3>
-            <p style="color: #94a3b8; line-height: 1.6;">Detailed walkthrough of the FinCEN verification process, ID scanning requirements, and why pre-verified accounts eliminate 2–3 week wait periods.</p>
+            <span style="background: #00D632; color: #000; font-size: 0.75rem; font-weight: 900; padding: 0.2rem 0.6rem; border-radius: 9999px;">SECURITY BLUEPRINT</span>
+            <h3 style="font-size: 1.3rem; color: #fff; margin: 0.8rem 0 0.5rem 0;"><a href="/blog/how-to-safely-warm-up-verified-cash-app-account" style="color: #00D632; text-decoration: none;">How to Safely Warm Up a New Verified Cash App Account (Anti-Ban Blueprint)</a></h3>
+            <p style="color: #94a3b8; line-height: 1.6;">Step-by-step guidance on establishing device trust, configuring US residential proxies, and scaling transaction limits without triggering automated flags.</p>
+            <div style="margin-top: 1rem;"><a href="/blog/how-to-safely-warm-up-verified-cash-app-account" style="color: #00D632; font-weight: bold; text-decoration: none;">Read Full Blueprint &rarr;</a></div>
           </article>
           <article style="background: #111822; padding: 1.5rem; border-radius: 16px; border: 1px solid #1e293b;">
-            <h3 style="font-size: 1.3rem; color: #fff; margin-bottom: 0.5rem;"><a href="/blog" style="color: #00D632; text-decoration: none;">Cash App Limits Explained: Upgrading from $250 to $25,000/Week</a></h3>
-            <p style="color: #94a3b8; line-height: 1.6;">An in-depth guide on Cash App account tiers, Sutton Bank direct deposit routing, and how limits scale with identity verification.</p>
+            <span style="background: #F7931A; color: #000; font-size: 0.75rem; font-weight: 900; padding: 0.2rem 0.6rem; border-radius: 9999px;">BITCOIN OPERATIONS</span>
+            <h3 style="font-size: 1.3rem; color: #fff; margin: 0.8rem 0 0.5rem 0;"><a href="/blog/bitcoin-withdrawal-limits-cash-app-guide" style="color: #F7931A; text-decoration: none;">Cash App Bitcoin Withdrawal Limits: Everything You Need to Know in 2026</a></h3>
+            <p style="color: #94a3b8; line-height: 1.6;">Understand on-chain limits ($2,000/24h, $5,000/week), zero-fee standard settlement, priority mempool broadcast, and wallet verification requirements.</p>
+            <div style="margin-top: 1rem;"><a href="/blog/bitcoin-withdrawal-limits-cash-app-guide" style="color: #F7931A; font-weight: bold; text-decoration: none;">Read Full Guide &rarr;</a></div>
+          </article>
+          <article style="background: #111822; padding: 1.5rem; border-radius: 16px; border: 1px solid #1e293b;">
+            <span style="background: #3b82f6; color: #fff; font-size: 0.75rem; font-weight: 900; padding: 0.2rem 0.6rem; border-radius: 9999px;">BANKING ARCHITECTURE</span>
+            <h3 style="font-size: 1.3rem; color: #fff; margin: 0.8rem 0 0.5rem 0;"><a href="/blog/sutton-bank-routing-direct-deposit-cash-app" style="color: #3b82f6; text-decoration: none;">How Sutton Bank US Routing Works for Cash App Direct Deposits</a></h3>
+            <p style="color: #94a3b8; line-height: 1.6;">A comprehensive technical overview of routing numbers, automated clearing house (ACH) settlements, and employer direct payroll deposits.</p>
+            <div style="margin-top: 1rem;"><a href="/blog/sutton-bank-routing-direct-deposit-cash-app" style="color: #3b82f6; font-weight: bold; text-decoration: none;">Read Full Breakdown &rarr;</a></div>
+          </article>
+          <article style="background: #111822; padding: 1.5rem; border-radius: 16px; border: 1px solid #1e293b;">
+            <span style="background: #00D632; color: #000; font-size: 0.75rem; font-weight: 900; padding: 0.2rem 0.6rem; border-radius: 9999px;">LIMIT TIERS</span>
+            <h3 style="font-size: 1.3rem; color: #fff; margin: 0.8rem 0 0.5rem 0;"><a href="/blog/understanding-4k-10k-25k-limit-tiers" style="color: #00D632; text-decoration: none;">Comparing 4k, 10k, and 25k Limit Accounts: Which Tier Fits Your Business?</a></h3>
+            <p style="color: #94a3b8; line-height: 1.6;">Break down daily velocity, monthly volume ceilings, and price-to-volume ROI across beginner, scaling, and high-frequency merchant accounts.</p>
+            <div style="margin-top: 1rem;"><a href="/blog/understanding-4k-10k-25k-limit-tiers" style="color: #00D632; font-weight: bold; text-decoration: none;">Read Comparison &rarr;</a></div>
           </article>
         </div>
       </section>
@@ -261,6 +277,13 @@ const routes = [
           <li><a href="/sitemap.xml" style="color: #94a3b8; text-decoration: none;">XML Sitemap (Googlebot)</a></li>
           <li><a href="/robots.txt" style="color: #94a3b8; text-decoration: none;">robots.txt (Crawl Rules)</a></li>
         </ul>
+        <h3 style="font-size: 1.3rem; font-weight: 800; color: #ffffff; margin: 2rem 0 1rem 0;">Official Blog Guides &amp; Research</h3>
+        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.8rem; list-style: none; padding: 0;">
+          <li><a href="/blog/how-to-safely-warm-up-verified-cash-app-account" style="color: #00D632; text-decoration: none;">How to Safely Warm Up Verified Cash App Account</a></li>
+          <li><a href="/blog/bitcoin-withdrawal-limits-cash-app-guide" style="color: #00D632; text-decoration: none;">Cash App Bitcoin Withdrawal Limits (2026 Guide)</a></li>
+          <li><a href="/blog/sutton-bank-routing-direct-deposit-cash-app" style="color: #00D632; text-decoration: none;">Sutton Bank Direct Deposit Routing Guide</a></li>
+          <li><a href="/blog/understanding-4k-10k-25k-limit-tiers" style="color: #00D632; text-decoration: none;">Comparing 4k, 10k, and 25k Limit Tiers</a></li>
+        </ul>
       </section>
     `
   },
@@ -300,7 +323,15 @@ const routes = [
           <li><strong>Week 2+:</strong> Gradually scale to full weekly limit tiers ($4,000–$25,000).</li>
         </ul>
         <div style="margin-top: 2rem;">
-          <a href="/buy-verified-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none;">Browse Available Accounts</a>
+          <a href="/buy-verified-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none; display: inline-block;">Browse Available Accounts</a>
+        </div>
+        <div style="margin-top: 2rem; padding: 1.5rem; background: #0b131d; border-radius: 14px; border: 1px solid #1e293b;">
+          <h4 style="color: #fff; margin-bottom: 0.8rem; font-size: 1.1rem;">Related Technical Guides:</h4>
+          <ul style="padding-left: 1.2rem; color: #94a3b8; line-height: 1.8;">
+            <li><a href="/blog/bitcoin-withdrawal-limits-cash-app-guide" style="color: #00D632; text-decoration: none;">Cash App Bitcoin Withdrawal Limits: Everything You Need to Know in 2026</a></li>
+            <li><a href="/blog/sutton-bank-routing-direct-deposit-cash-app" style="color: #00D632; text-decoration: none;">How Sutton Bank US Routing Works for Cash App Direct Deposits</a></li>
+            <li><a href="/blog/understanding-4k-10k-25k-limit-tiers" style="color: #00D632; text-decoration: none;">Comparing 4k, 10k, and 25k Limit Accounts: Which Tier Fits Your Business?</a></li>
+          </ul>
         </div>
       </article>
     `
@@ -333,7 +364,15 @@ const routes = [
           <li><strong>Hardware Wallet Compatibility:</strong> Send directly to Ledger, Trezor, BitBox02, and cold storage addresses without custodial restrictions.</li>
         </ul>
         <div style="margin-top: 2rem;">
-          <a href="/buy-btc-enabled-cashapp-accounts" style="background: #F7931A; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none;">View BTC Enabled Accounts</a>
+          <a href="/buy-btc-enabled-cashapp-accounts" style="background: #F7931A; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none; display: inline-block;">View BTC Enabled Accounts</a>
+        </div>
+        <div style="margin-top: 2rem; padding: 1.5rem; background: #0b131d; border-radius: 14px; border: 1px solid #1e293b;">
+          <h4 style="color: #fff; margin-bottom: 0.8rem; font-size: 1.1rem;">Related Technical Guides:</h4>
+          <ul style="padding-left: 1.2rem; color: #94a3b8; line-height: 1.8;">
+            <li><a href="/blog/how-to-safely-warm-up-verified-cash-app-account" style="color: #00D632; text-decoration: none;">How to Safely Warm Up a New Verified Cash App Account (Anti-Ban Blueprint)</a></li>
+            <li><a href="/blog/sutton-bank-routing-direct-deposit-cash-app" style="color: #00D632; text-decoration: none;">How Sutton Bank US Routing Works for Cash App Direct Deposits</a></li>
+            <li><a href="/blog/understanding-4k-10k-25k-limit-tiers" style="color: #00D632; text-decoration: none;">Comparing 4k, 10k, and 25k Limit Accounts: Which Tier Fits Your Business?</a></li>
+          </ul>
         </div>
       </article>
     `
@@ -363,7 +402,15 @@ const routes = [
           <li><strong>Wire &amp; ACH Inbound:</strong> Accept third-party US business payments and platform payouts.</li>
         </ul>
         <div style="margin-top: 2rem;">
-          <a href="/buy-non-btc-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none;">View USD Accounts with Routing</a>
+          <a href="/buy-non-btc-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none; display: inline-block;">View USD Accounts with Routing</a>
+        </div>
+        <div style="margin-top: 2rem; padding: 1.5rem; background: #0b131d; border-radius: 14px; border: 1px solid #1e293b;">
+          <h4 style="color: #fff; margin-bottom: 0.8rem; font-size: 1.1rem;">Related Technical Guides:</h4>
+          <ul style="padding-left: 1.2rem; color: #94a3b8; line-height: 1.8;">
+            <li><a href="/blog/how-to-safely-warm-up-verified-cash-app-account" style="color: #00D632; text-decoration: none;">How to Safely Warm Up a New Verified Cash App Account (Anti-Ban Blueprint)</a></li>
+            <li><a href="/blog/bitcoin-withdrawal-limits-cash-app-guide" style="color: #00D632; text-decoration: none;">Cash App Bitcoin Withdrawal Limits: Everything You Need to Know in 2026</a></li>
+            <li><a href="/blog/understanding-4k-10k-25k-limit-tiers" style="color: #00D632; text-decoration: none;">Comparing 4k, 10k, and 25k Limit Accounts: Which Tier Fits Your Business?</a></li>
+          </ul>
         </div>
       </article>
     `
@@ -404,9 +451,209 @@ const routes = [
           <li><strong>Includes:</strong> Full BTC withdrawal verification, aged history, Sutton Bank routing, and complete identity records.</li>
         </ul>
         <div style="margin-top: 2rem;">
-          <a href="/buy-verified-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none;">View Complete Catalog</a>
+          <a href="/buy-verified-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 800; text-decoration: none; display: inline-block;">View Complete Catalog</a>
+        </div>
+        <div style="margin-top: 2rem; padding: 1.5rem; background: #0b131d; border-radius: 14px; border: 1px solid #1e293b;">
+          <h4 style="color: #fff; margin-bottom: 0.8rem; font-size: 1.1rem;">Related Technical Guides:</h4>
+          <ul style="padding-left: 1.2rem; color: #94a3b8; line-height: 1.8;">
+            <li><a href="/blog/how-to-safely-warm-up-verified-cash-app-account" style="color: #00D632; text-decoration: none;">How to Safely Warm Up a New Verified Cash App Account (Anti-Ban Blueprint)</a></li>
+            <li><a href="/blog/bitcoin-withdrawal-limits-cash-app-guide" style="color: #00D632; text-decoration: none;">Cash App Bitcoin Withdrawal Limits: Everything You Need to Know in 2026</a></li>
+            <li><a href="/blog/sutton-bank-routing-direct-deposit-cash-app" style="color: #00D632; text-decoration: none;">How Sutton Bank US Routing Works for Cash App Direct Deposits</a></li>
+          </ul>
         </div>
       </article>
+    `
+  },
+  {
+    slug: 'product/btc-4k',
+    title: 'BTC Enable 4k Cash App Account ($4,000 / Week Limit) - CashappAgent',
+    description: 'Buy verified BTC Enable 4k Cash App account. Fully verified with SSN & ID, on-chain Bitcoin withdrawal enabled, Sutton Bank routing, 30-day warranty.',
+    keywords: 'buy btc enabled 4k cash app account, btc 4k cash app, verified cash app btc withdrawal, cashappagent',
+    ogTitle: 'BTC Enable 4k Cash App Account - $4,000/Week Limit',
+    ogDescription: 'Instant crypto delivery. SSN/ID verified with on-chain Bitcoin external sends unlocked.',
+    h1: 'BTC Enable 4k <span style="color: #F7931A;">Cash App Account</span>',
+    subheading: '$4,000 weekly transaction limit with on-chain Bitcoin external wallet withdrawals unlocked. 100% ID verified with Sutton Bank routing.',
+    mainHtml: `
+      <section style="margin-bottom: 3rem; color: #cbd5e1; line-height: 1.8;">
+        <div style="background: #111822; border: 1px solid #F7931A; padding: 2rem; border-radius: 20px; margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <div>
+              <span style="background: #F7931A; color: #000; font-size: 0.8rem; font-weight: 900; padding: 0.3rem 0.8rem; border-radius: 9999px;">HOT &bull; BITCOIN UNLOCKED</span>
+              <h2 style="font-size: 2rem; color: #fff; margin-top: 0.5rem;">$249.00 USD</h2>
+            </div>
+            <a href="/buy-btc-enabled-cashapp-accounts" style="background: #F7931A; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 900; text-decoration: none;">Order Account Now</a>
+          </div>
+          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.8rem;">Technical Specifications</h3>
+          <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li><strong>Weekly Limit:</strong> $4,000 / week</li>
+            <li><strong>Daily Limit:</strong> $2,500 / day</li>
+            <li><strong>BTC Withdrawal:</strong> Unlocked ($2,000/day on-chain external transfers)</li>
+            <li><strong>Direct Deposit:</strong> Active Sutton Bank / Bancorp routing numbers</li>
+            <li><strong>Documents Included:</strong> SSN + State ID scan bundle + Primary email credentials</li>
+            <li><strong>Protection:</strong> 30-Day Escrow Replacement Warranty</li>
+          </ul>
+        </div>
+      </section>
+    `
+  },
+  {
+    slug: 'product/btc-10k',
+    title: 'BTC Enable 10k Cash App Account ($10,000 / Week Limit) - CashappAgent',
+    description: 'Buy verified BTC Enable 10k Cash App account. Aged USA profile with high trust score, enhanced Bitcoin withdrawal limits, and direct deposit routing.',
+    keywords: 'buy btc enabled 10k cash app account, aged cash app account, btc 10k limit cash app, cashappagent',
+    ogTitle: 'BTC Enable 10k Cash App Account - $10,000/Week Limit',
+    ogDescription: 'Aged verified account with $10,000 weekly volume and elevated trust score. 30-day warranty.',
+    h1: 'BTC Enable 10k <span style="color: #F7931A;">Cash App Account</span>',
+    subheading: 'Aged high-tier verified Cash App account with enhanced Bitcoin transaction limits and $10,000 weekly turnover capacity.',
+    mainHtml: `
+      <section style="margin-bottom: 3rem; color: #cbd5e1; line-height: 1.8;">
+        <div style="background: #111822; border: 1px solid #00D632; padding: 2rem; border-radius: 20px; margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <div>
+              <span style="background: #00D632; color: #000; font-size: 0.8rem; font-weight: 900; padding: 0.3rem 0.8rem; border-radius: 9999px;">BEST SELLER</span>
+              <h2 style="font-size: 2rem; color: #fff; margin-top: 0.5rem;">$349.00 USD</h2>
+            </div>
+            <a href="/buy-btc-enabled-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 900; text-decoration: none;">Order Account Now</a>
+          </div>
+          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.8rem;">Technical Specifications</h3>
+          <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li><strong>Weekly Limit:</strong> $10,000 / week</li>
+            <li><strong>Daily Limit:</strong> $5,000 / day</li>
+            <li><strong>BTC Withdrawal:</strong> Unlocked ($5,000/day on-chain)</li>
+            <li><strong>Direct Deposit:</strong> High-limit Bancorp / Sutton Bank routing</li>
+            <li><strong>Documents Included:</strong> Full KYC dossier (SSN, ID, utility proof) + dedicated primary webmail</li>
+            <li><strong>Protection:</strong> 30-Day Escrow Replacement Warranty</li>
+          </ul>
+        </div>
+      </section>
+    `
+  },
+  {
+    slug: 'product/btc-25k',
+    title: 'BTC Enable 25k Cash App Account ($25,000 / Week Limit) - CashappAgent',
+    description: 'Buy verified BTC Enable 25k Cash App account. Maximum institutional tier with $25,000 weekly limit, commercial ACH routing, and dual KYC verification.',
+    keywords: 'buy btc enabled 25k cash app account, 25k limit cash app, high limit verified cash app, cashappagent',
+    ogTitle: 'BTC Enable 25k Cash App Account - Maximum Limit',
+    ogDescription: 'Institutional grade $25k/week verified account with commercial direct deposit and high-volume BTC sends.',
+    h1: 'BTC Enable 25k <span style="color: #F7931A;">Cash App Account</span>',
+    subheading: 'Premium institutional/business tier verified Cash App account with maximum $25,000 weekly limits and limitless BTC trading.',
+    mainHtml: `
+      <section style="margin-bottom: 3rem; color: #cbd5e1; line-height: 1.8;">
+        <div style="background: #111822; border: 1px solid #F7931A; padding: 2rem; border-radius: 20px; margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <div>
+              <span style="background: #F7931A; color: #000; font-size: 0.8rem; font-weight: 900; padding: 0.3rem 0.8rem; border-radius: 9999px;">MAXIMUM LIMIT</span>
+              <h2 style="font-size: 2rem; color: #fff; margin-top: 0.5rem;">$499.00 USD</h2>
+            </div>
+            <a href="/buy-btc-enabled-cashapp-accounts" style="background: #F7931A; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 900; text-decoration: none;">Order Account Now</a>
+          </div>
+          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.8rem;">Technical Specifications</h3>
+          <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li><strong>Weekly Limit:</strong> $25,000 / week ($75,000+ monthly)</li>
+            <li><strong>Daily Limit:</strong> $10,000 / day</li>
+            <li><strong>BTC Withdrawal:</strong> High-tier ($10,000/day BTC)</li>
+            <li><strong>Direct Deposit:</strong> Commercial ACH & Sutton Bank routing</li>
+            <li><strong>Documents Included:</strong> Dual verification dossier (SSN/EIN + Real ID scan + Tax documentation)</li>
+            <li><strong>Protection:</strong> 30-Day Escrow Replacement Warranty + VIP Priority Support</li>
+          </ul>
+        </div>
+      </section>
+    `
+  },
+  {
+    slug: 'product/non-btc-4k',
+    title: 'Non BTC Enable 4k Cash App Account ($4,000 / Week Limit) - CashappAgent',
+    description: 'Buy Non-BTC verified Cash App account with $4,000 weekly sending limit. Budget-friendly personal profile for USD transfers, direct deposits, and Cash Card.',
+    keywords: 'buy non btc 4k cash app account, cheap verified cash app, verified usd cash app, cashappagent',
+    ogTitle: 'Non BTC Enable 4k Cash App Account - Budget Pick',
+    ogDescription: 'Verified personal account with $4,000 weekly limit for USD peer-to-peer sending and direct deposits.',
+    h1: 'Non BTC Enable 4k <span style="color: #00D632;">Cash App Account</span>',
+    subheading: 'Fully verified personal Cash App account with $4,000 weekly sending limit for standard USD peer-to-peer transfers and card payments.',
+    mainHtml: `
+      <section style="margin-bottom: 3rem; color: #cbd5e1; line-height: 1.8;">
+        <div style="background: #111822; border: 1px solid #1e293b; padding: 2rem; border-radius: 20px; margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <div>
+              <span style="background: #00D632; color: #000; font-size: 0.8rem; font-weight: 900; padding: 0.3rem 0.8rem; border-radius: 9999px;">BUDGET PICK</span>
+              <h2 style="font-size: 2rem; color: #fff; margin-top: 0.5rem;">$189.00 USD</h2>
+            </div>
+            <a href="/buy-non-btc-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 900; text-decoration: none;">Order Account Now</a>
+          </div>
+          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.8rem;">Technical Specifications</h3>
+          <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li><strong>Weekly Limit:</strong> $4,000 / week (USD)</li>
+            <li><strong>Daily Limit:</strong> $2,500 / day</li>
+            <li><strong>BTC Feature:</strong> Non-BTC (USD Only)</li>
+            <li><strong>Direct Deposit:</strong> Active Sutton Bank routing</li>
+            <li><strong>Documents Included:</strong> SSN + State ID scan + Primary email login</li>
+            <li><strong>Protection:</strong> 30-Day Replacement Guarantee</li>
+          </ul>
+        </div>
+      </section>
+    `
+  },
+  {
+    slug: 'product/non-btc-10k',
+    title: 'Non BTC Enable 10k Cash App Account ($10,000 / Week Limit) - CashappAgent',
+    description: 'Buy Non-BTC verified Cash App account with $10,000 weekly sending limit. Aged USD profile for high-volume transactions, merchant invoices, and debit cashouts.',
+    keywords: 'buy non btc 10k cash app account, 10k limit usd cash app, high limit cash app account, cashappagent',
+    ogTitle: 'Non BTC Enable 10k Cash App Account - High Limit USD',
+    ogDescription: 'Aged verified account with $10,000 weekly volume and Sutton Bank direct deposit routing.',
+    h1: 'Non BTC Enable 10k <span style="color: #00D632;">Cash App Account</span>',
+    subheading: 'Aged USD verified Cash App account with expanded $10,000 weekly volume limit for high-frequency transfers and merchant payouts.',
+    mainHtml: `
+      <section style="margin-bottom: 3rem; color: #cbd5e1; line-height: 1.8;">
+        <div style="background: #111822; border: 1px solid #1e293b; padding: 2rem; border-radius: 20px; margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <div>
+              <span style="background: #3b82f6; color: #fff; font-size: 0.8rem; font-weight: 900; padding: 0.3rem 0.8rem; border-radius: 9999px;">HIGH LIMIT USD</span>
+              <h2 style="font-size: 2rem; color: #fff; margin-top: 0.5rem;">$229.00 USD</h2>
+            </div>
+            <a href="/buy-non-btc-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 900; text-decoration: none;">Order Account Now</a>
+          </div>
+          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.8rem;">Technical Specifications</h3>
+          <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li><strong>Weekly Limit:</strong> $10,000 / week ($30,000 monthly)</li>
+            <li><strong>Daily Limit:</strong> $5,000 / day</li>
+            <li><strong>BTC Feature:</strong> Non-BTC (USD Only)</li>
+            <li><strong>Direct Deposit:</strong> Active Sutton Bank routing</li>
+            <li><strong>Documents Included:</strong> SSN + State ID scan front/back + Clean email login</li>
+            <li><strong>Protection:</strong> 30-Day Replacement Guarantee</li>
+          </ul>
+        </div>
+      </section>
+    `
+  },
+  {
+    slug: 'product/non-btc-15k',
+    title: 'Non BTC Enable 15k Cash App Account ($15,000 / Week Limit) - CashappAgent',
+    description: 'Buy Non-BTC verified Cash App account with maximum $15,000 weekly sending limit. Top-tier USD volume for large business transactions and commercial settlements.',
+    keywords: 'buy non btc 15k cash app account, 15k limit cash app, maximum limit non btc cash app, cashappagent',
+    ogTitle: 'Non BTC Enable 15k Cash App Account - Top USD Volume',
+    ogDescription: 'Maximum limit Non-BTC verified Cash App account supporting up to $15,000 weekly turnover.',
+    h1: 'Non BTC Enable 15k <span style="color: #00D632;">Cash App Account</span>',
+    subheading: 'The pinnacle of our fiat lineup: $15,000 weekly capacity for high-turnover business invoicing and unrestricted USD settlements.',
+    mainHtml: `
+      <section style="margin-bottom: 3rem; color: #cbd5e1; line-height: 1.8;">
+        <div style="background: #111822; border: 1px solid #00D632; padding: 2rem; border-radius: 20px; margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <div>
+              <span style="background: #00D632; color: #000; font-size: 0.8rem; font-weight: 900; padding: 0.3rem 0.8rem; border-radius: 9999px;">TOP USD VOLUME</span>
+              <h2 style="font-size: 2rem; color: #fff; margin-top: 0.5rem;">$259.00 USD</h2>
+            </div>
+            <a href="/buy-non-btc-cashapp-accounts" style="background: #00D632; color: #000; padding: 0.8rem 1.6rem; border-radius: 12px; font-weight: 900; text-decoration: none;">Order Account Now</a>
+          </div>
+          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.8rem;">Technical Specifications</h3>
+          <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li><strong>Weekly Limit:</strong> $15,000 / week ($45,000 monthly)</li>
+            <li><strong>Daily Limit:</strong> $7,500 / day</li>
+            <li><strong>BTC Feature:</strong> Non-BTC (USD Only)</li>
+            <li><strong>Direct Deposit:</strong> Commercial ACH & Sutton Bank routing</li>
+            <li><strong>Documents Included:</strong> Full KYC multi-point document set (SSN, DL, residence)</li>
+            <li><strong>Protection:</strong> 30-Day Replacement Guarantee</li>
+          </ul>
+        </div>
+      </section>
     `
   },
   {
