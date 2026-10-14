@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CONTACT_INFO } from '../data/cryptoGateways';
+import { CONTACT_INFO, getTelegramUrl, getWhatsappUrl } from '../data/cryptoGateways';
 import { 
   Send, 
   Phone, 
@@ -16,15 +16,36 @@ export const ContactSection: React.FC = () => {
   const [contactHandle, setContactHandle] = useState('');
   const [accountInterest, setAccountInterest] = useState('BTC Enable 10k Cash App Account ($349)');
   const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [submittedChannel, setSubmittedChannel] = useState<'telegram' | 'whatsapp' | null>(null);
+
+  const getFormattedMessage = () => {
+    const details = [
+      name ? `Name: ${name}` : null,
+      contactHandle ? `Contact: ${contactHandle}` : null,
+      accountInterest ? `Interested in: ${accountInterest}` : null,
+      message ? `Details: ${message}` : 'I would like to inquire about purchasing a verified Cash App account.'
+    ].filter(Boolean).join('\n');
+
+    return details;
+  };
+
+  const handleSendTelegram = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    const url = getTelegramUrl(getFormattedMessage());
+    window.open(url, '_blank');
+    setSubmittedChannel('telegram');
+  };
+
+  const handleSendWhatsapp = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    const url = getWhatsappUrl(getFormattedMessage());
+    window.open(url, '_blank');
+    setSubmittedChannel('whatsapp');
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const encodedText = encodeURIComponent(
-      `Hello CashappAgent Support,\n\nName: ${name}\nContact: ${contactHandle}\nInterested in: ${accountInterest}\nMessage: ${message || 'I want to purchase a verified Cash App account.'}`
-    );
-    window.open(`${CONTACT_INFO.telegramUrl}?text=${encodedText}`, '_blank');
-    setSubmitted(true);
+    handleSendTelegram();
   };
 
   return (
@@ -196,18 +217,32 @@ export const ContactSection: React.FC = () => {
                 />
               </div>
 
-              <button
-                type="submit"
-                id="contact-form-send-btn"
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#00A827] via-[#00D632] to-[#00FF44] hover:from-[#00B82B] text-black font-black text-sm shadow-xl shadow-[#00D632]/25 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <Send className="w-4 h-4" />
-                <span>Open Instant Chat on Telegram</span>
-              </button>
+              {/* Action Buttons for Telegram & WhatsApp */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <button
+                  type="button"
+                  id="contact-form-send-telegram-btn"
+                  onClick={handleSendTelegram}
+                  className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-sky-600 via-sky-500 to-sky-400 hover:from-sky-500 hover:to-sky-400 text-white font-extrabold text-xs shadow-xl shadow-sky-500/25 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <Send className="w-4 h-4 text-white" />
+                  <span>Send via Telegram</span>
+                </button>
 
-              {submitted && (
-                <div className="p-3 rounded-xl bg-emerald-950/80 border border-emerald-700/60 text-emerald-300 text-xs font-bold text-center">
-                  Chat opened! Our Telegram agent ({CONTACT_INFO.telegram}) will respond immediately.
+                <button
+                  type="button"
+                  id="contact-form-send-whatsapp-btn"
+                  onClick={handleSendWhatsapp}
+                  className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#00A827] via-[#00D632] to-[#00FF44] hover:from-[#00B82B] text-black font-extrabold text-xs shadow-xl shadow-[#00D632]/25 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <Phone className="w-4 h-4 fill-black text-black" />
+                  <span>Send via WhatsApp</span>
+                </button>
+              </div>
+
+              {submittedChannel && (
+                <div className="p-3 rounded-xl bg-emerald-950/80 border border-emerald-700/60 text-emerald-300 text-xs font-bold text-center animate-in fade-in">
+                  Chat opened on {submittedChannel === 'whatsapp' ? 'WhatsApp' : 'Telegram'} with inquiry text included! Our support team will reply immediately.
                 </div>
               )}
             </form>

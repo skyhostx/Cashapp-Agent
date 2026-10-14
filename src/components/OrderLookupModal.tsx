@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { OrderDetails } from '../types';
-import { CONTACT_INFO } from '../data/cryptoGateways';
+import { CONTACT_INFO, getTelegramUrl, getWhatsappUrl, formatOrderDetailsMessage } from '../data/cryptoGateways';
 import { 
   Search, 
   X, 
@@ -8,6 +8,7 @@ import {
   Clock, 
   ShieldCheck, 
   Send, 
+  Phone,
   AlertCircle, 
   PackageCheck,
   FileText
@@ -171,17 +172,28 @@ export const OrderLookupModal: React.FC<OrderLookupModalProps> = ({
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-800 flex justify-between items-center text-xs">
+              <div className="pt-3 border-t border-slate-800 flex flex-wrap justify-between items-center gap-2 text-xs">
                 <span className="text-slate-400">Need priority delivery?</span>
-                <a
-                  href={`${CONTACT_INFO.telegramUrl}?text=Status%20request%20for%20order%20${matchedOrder.orderId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-sky-400 font-bold hover:underline"
-                >
-                  <Send className="w-3.5 h-3.5" />
-                  <span>Contact Telegram Support</span>
-                </a>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={getTelegramUrl(formatOrderDetailsMessage(matchedOrder))}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-950/80 border border-sky-600/40 text-sky-300 font-bold hover:bg-sky-900 transition-colors"
+                  >
+                    <Send className="w-3.5 h-3.5" />
+                    <span>Telegram for Delivery</span>
+                  </a>
+                  <a
+                    href={getWhatsappUrl(formatOrderDetailsMessage(matchedOrder))}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-600/40 text-emerald-300 font-bold hover:bg-emerald-900 transition-colors"
+                  >
+                    <Phone className="w-3.5 h-3.5 fill-emerald-400" />
+                    <span>WhatsApp for Delivery</span>
+                  </a>
+                </div>
               </div>
             </div>
           ) : searched && !matchedOrder ? (
@@ -189,17 +201,28 @@ export const OrderLookupModal: React.FC<OrderLookupModalProps> = ({
               <AlertCircle className="w-8 h-8 text-amber-400 mx-auto" />
               <div className="text-sm font-bold text-white">Order not found in instant memory</div>
               <p className="text-xs text-slate-400 max-w-sm mx-auto">
-                If you made a payment recently via BSC, TRX, ETH, SOL, BTC, LTC, or DOGE, please contact our 24/7 Telegram support directly with your TXID for manual lookup.
+                If you made a payment recently via BSC, TRX, ETH, SOL, BTC, LTC, or DOGE, please contact our 24/7 support directly with your TXID for manual lookup.
               </p>
-              <a
-                href={CONTACT_INFO.telegramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-950 border border-sky-700/60 text-sky-300 text-xs font-bold"
-              >
-                <Send className="w-3.5 h-3.5" />
-                <span>Contact Telegram: {CONTACT_INFO.telegram}</span>
-              </a>
+              <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+                <a
+                  href={CONTACT_INFO.telegramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-950 border border-sky-700/60 text-sky-300 text-xs font-bold hover:bg-sky-900/60 transition-colors"
+                >
+                  <Send className="w-3.5 h-3.5" />
+                  <span>Telegram Support</span>
+                </a>
+                <a
+                  href={CONTACT_INFO.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-950 border border-emerald-700/60 text-emerald-300 text-xs font-bold hover:bg-emerald-900/60 transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 fill-emerald-300" />
+                  <span>WhatsApp Support</span>
+                </a>
+              </div>
             </div>
           ) : (
             <div className="text-center py-6 text-xs text-slate-500">

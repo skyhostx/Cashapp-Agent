@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CartItem, CryptoCurrency, OrderDetails } from '../types';
-import { CRYPTO_GATEWAYS, CONTACT_INFO } from '../data/cryptoGateways';
+import { CRYPTO_GATEWAYS, CONTACT_INFO, getTelegramUrl, getWhatsappUrl, formatOrderDetailsMessage } from '../data/cryptoGateways';
 import { generateCryptoQrSvg } from '../utils/qrHelper';
 import confetti from 'canvas-confetti';
 import { 
@@ -11,6 +11,7 @@ import {
   Bitcoin, 
   Zap, 
   Send, 
+  Phone,
   Download, 
   RefreshCw, 
   ArrowRight,
@@ -1000,27 +1001,48 @@ Need urgent dispatch? Message us on Telegram: ${CONTACT_INFO.telegram}
                 </div>
               </div>
 
-              {/* Action Buttons */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <button
-                  id="download-order-receipt-btn"
-                  onClick={downloadReceipt}
-                  className="py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-bold text-xs flex items-center justify-center gap-2 cursor-pointer transition-colors"
-                >
-                  <Download className="w-4 h-4 text-emerald-400" />
-                  <span>Download Invoice (.txt)</span>
-                </button>
+              {/* Delivery Action Notice & Buttons */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-xs px-1">
+                  <span className="text-slate-300 font-semibold flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-[#00D632] animate-pulse" />
+                    Expedite Instant Delivery:
+                  </span>
+                  <span className="text-[11px] text-[#00D632] font-mono font-bold">24/7 Live Dispatchers</span>
+                </div>
 
-                <a
-                  id="order-telegram-dispatch-btn"
-                  href={`${CONTACT_INFO.telegramUrl}?text=Hello,%20I%20just%20placed%20Order%20${confirmedOrder.orderId}%20on%20CashappAgent.%20Payment%20Method:%20${confirmedOrder.cryptoCurrency}.%20Please%20expedite%20my%20delivery.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-3 px-4 rounded-xl bg-sky-900/60 hover:bg-sky-800/80 border border-sky-600/50 text-sky-200 font-bold text-xs flex items-center justify-center gap-2 transition-colors"
-                >
-                  <Send className="w-4 h-4 text-sky-400" />
-                  <span>Notify Telegram Agent</span>
-                </a>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                  <button
+                    id="download-order-receipt-btn"
+                    onClick={downloadReceipt}
+                    className="py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-bold text-xs flex items-center justify-center gap-1.5 cursor-pointer transition-colors"
+                  >
+                    <Download className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span>Download Invoice</span>
+                  </button>
+
+                  <a
+                    id="order-telegram-dispatch-btn"
+                    href={getTelegramUrl(formatOrderDetailsMessage(confirmedOrder))}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-3 px-3 rounded-xl bg-sky-950 hover:bg-sky-900 border border-sky-500/60 text-sky-200 font-bold text-xs flex items-center justify-center gap-1.5 transition-colors text-center shadow-lg shadow-sky-950/50"
+                  >
+                    <Send className="w-4 h-4 text-sky-400 shrink-0" />
+                    <span>Telegram for Delivery</span>
+                  </a>
+
+                  <a
+                    id="order-whatsapp-dispatch-btn"
+                    href={getWhatsappUrl(formatOrderDetailsMessage(confirmedOrder))}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-3 px-3 rounded-xl bg-emerald-950 hover:bg-emerald-900 border border-emerald-500/60 text-emerald-200 font-bold text-xs flex items-center justify-center gap-1.5 transition-colors text-center shadow-lg shadow-emerald-950/50"
+                  >
+                    <Phone className="w-4 h-4 fill-emerald-400 text-emerald-400 shrink-0" />
+                    <span>WhatsApp for Delivery</span>
+                  </a>
+                </div>
               </div>
 
               {/* Order Again Primary Action */}

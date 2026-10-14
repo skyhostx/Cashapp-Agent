@@ -1,17 +1,70 @@
-import { CryptoCurrency, CryptoGateway, FaqItem, Testimonial } from '../types';
+import { CryptoCurrency, CryptoGateway, FaqItem, Testimonial, OrderDetails } from '../types';
+
+export const DEFAULT_SUPPORT_MESSAGE = 'Hello CashappAgent, I need assistance with an inquiry';
 
 export const CONTACT_INFO = {
   telegram: '@CashappAgentTeam',
-  telegramUrl: 'https://t.me/CashappAgentTeam',
+  telegramBaseUrl: 'https://t.me/CashappAgentTeam',
+  telegramUrl: `https://t.me/CashappAgentTeam?text=${encodeURIComponent(DEFAULT_SUPPORT_MESSAGE)}`,
   whatsapp: '+1 (253) 408-0049',
-  whatsappUrl: 'https://wa.me/12534080049',
+  whatsappBaseUrl: 'https://wa.me/12534080049',
+  whatsappUrl: `https://wa.me/12534080049?text=${encodeURIComponent(DEFAULT_SUPPORT_MESSAGE)}`,
   email: 'support@cashappagent.com',
   emailUrl: 'mailto:support@cashappagent.com',
   domain: 'cashappagent.com',
   brandName: 'CashappAgent',
   businessHours: '24/7/365 Live Support',
-  deliveryTime: '5 - 15 Minutes Instant Delivery'
+  deliveryTime: '5 - 15 Minutes Instant Delivery',
+  defaultInquiryMessage: DEFAULT_SUPPORT_MESSAGE
 };
+
+export function getTelegramUrl(customText?: string): string {
+  const text = customText
+    ? `${DEFAULT_SUPPORT_MESSAGE}\n\n${customText}`
+    : DEFAULT_SUPPORT_MESSAGE;
+  return `https://t.me/CashappAgentTeam?text=${encodeURIComponent(text)}`;
+}
+
+export function getWhatsappUrl(customText?: string): string {
+  const text = customText
+    ? `${DEFAULT_SUPPORT_MESSAGE}\n\n${customText}`
+    : DEFAULT_SUPPORT_MESSAGE;
+  return `https://wa.me/12534080049?text=${encodeURIComponent(text)}`;
+}
+
+export function formatOrderDetailsMessage(order: OrderDetails): string {
+  const itemsSummary = order.items && order.items.length > 0
+    ? order.items.map(item => `• ${item.quantity}x ${item.product.name} ($${item.product.price} each)`).join('\n')
+    : '• Cash App Verified Account';
+
+  const paymentMethodName = order.cryptoCurrency.startsWith('BANK_')
+    ? (CRYPTO_GATEWAYS[order.cryptoCurrency]?.name || order.cryptoCurrency)
+    : order.cryptoCurrency === 'SKRILL'
+    ? 'Skrill E-Wallet (onlinespay247@gmail.com)'
+    : `${order.cryptoCurrency} (${order.cryptoAmount} ${order.cryptoCurrency})`;
+
+  return [
+    `📦 ORDER FULL DETAILS FOR DELIVERY:`,
+    `----------------------------------------`,
+    `• Order ID: ${order.orderId}`,
+    `• Order Date: ${order.createdAt || new Date().toLocaleString()}`,
+    `• Status: Payment Confirmed / Ready for Delivery`,
+    ``,
+    `🛒 Items Ordered:`,
+    itemsSummary,
+    ``,
+    `💰 Total Amount: $${order.totalAmountUsd.toFixed(2)} USD`,
+    `💳 Payment Gateway: ${paymentMethodName}`,
+    order.walletAddress ? `🏦 Target Wallet / Account: ${order.walletAddress}` : '',
+    order.txHash ? `🔗 TXID / Proof: ${order.txHash}` : `🔗 Payment Proof: Confirmed`,
+    `📬 Delivery Email: ${order.customerEmail}`,
+    `📱 Contact / Handle: ${order.telegramOrWhatsapp || 'Not specified'}`,
+    `⏱️ Estimated Delivery: ${order.deliveryEta || '5 - 15 minutes'} (Instant)`,
+    `🛡️ Warranty: 30-Day Full Replacement Guarantee`,
+    `----------------------------------------`,
+    `Please expedite delivery of my account login credentials and verification documents.`
+  ].filter(Boolean).join('\n');
+}
 
 export const CRYPTO_GATEWAYS: Record<CryptoCurrency, CryptoGateway> = {
   BSC: {

@@ -236,12 +236,12 @@ const routes = [
           <div style="background: #111822; padding: 1.5rem; border-radius: 16px; border: 1px solid #0088cc;">
             <h3 style="font-size: 1.2rem; color: #0088cc; margin-bottom: 0.5rem;">Telegram VIP Desk</h3>
             <p style="color: #cbd5e1; margin-bottom: 1rem;">Instant live agent chat (under 2-minute reply time).</p>
-            <a href="https://t.me/CashappAgentTeam" target="_blank" rel="noopener noreferrer" style="color: #00D632; font-weight: bold; text-decoration: none;">@CashappAgentTeam &rarr;</a>
+            <a href="https://t.me/CashappAgentTeam?text=Hello%20CashappAgent%2C%20I%20need%20assistance%20with%20an%20inquiry" target="_blank" rel="noopener noreferrer" style="color: #00D632; font-weight: bold; text-decoration: none;">@CashappAgentTeam &rarr;</a>
           </div>
           <div style="background: #111822; padding: 1.5rem; border-radius: 16px; border: 1px solid #25D366;">
             <h3 style="font-size: 1.2rem; color: #25D366; margin-bottom: 0.5rem;">WhatsApp Direct</h3>
             <p style="color: #cbd5e1; margin-bottom: 1rem;">Direct customer support and order status lookup.</p>
-            <a href="https://wa.me/12534080049" target="_blank" rel="noopener noreferrer" style="color: #00D632; font-weight: bold; text-decoration: none;">+1 (253) 408-0049 &rarr;</a>
+            <a href="https://wa.me/12534080049?text=Hello%20CashappAgent%2C%20I%20need%20assistance%20with%20an%20inquiry" target="_blank" rel="noopener noreferrer" style="color: #00D632; font-weight: bold; text-decoration: none;">+1 (253) 408-0049 &rarr;</a>
           </div>
           <div style="background: #111822; padding: 1.5rem; border-radius: 16px; border: 1px solid #1e293b;">
             <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem;">Encrypted Email</h3>
