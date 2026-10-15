@@ -369,15 +369,9 @@ export const Footer: React.FC<FooterProps> = ({ onSelectProduct, onOpenOrderLook
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <a href="/robots.txt" target="_blank" className="hover:text-white transition-colors">robots.txt</a>
-            <span>&bull;</span>
-            <a href="/sitemap.xml" target="_blank" className="hover:text-white transition-colors">sitemap.xml</a>
-            <span>&bull;</span>
-            <a href="/sitemap" onClick={(e) => handleLinkClick('sitemap', e)} className="hover:text-white transition-colors">Sitemap Directory</a>
-            <span>&bull;</span>
-            <span className="flex items-center gap-1 text-slate-300">
+            <span className="flex items-center gap-1.5 text-slate-300">
               <ShieldCheck className="w-3.5 h-3.5 text-[#00D632]" />
-              100% Encrypted &bull; 30-Day Guarantee
+              100% Encrypted &bull; 30-Day Replacement Guarantee
             </span>
           </div>
         </div>
